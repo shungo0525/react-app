@@ -53,3 +53,6 @@ export default App;
 
 // ref: https://blog.uhy.ooo/entry/2021-02-23/usecallback-custom-hooks/
 // カスタムフック内の関数にはuseCallbackを使ったほうがよいかも
+
+// ref: https://zenn.dev/koki_tech/articles/4d7aeaa9908040
+// メモ化の計測
