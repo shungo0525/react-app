@@ -15,6 +15,9 @@ const Child = React.memo((props) => {
     </>
   )
 });
+// ref: https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/display-name.md
+// 開発環境でのデバッグ時に、複数のコンポーネントが存在する場合エラーメッセージからのデバッグが難しくなってしまう
+Child.displayName = 'Child';
 
 const App = () => {
   console.log("render App");
