@@ -1,6 +1,8 @@
 import styled from 'styled-components'
-import {Suspense, useState, FC} from "react"
+import {Suspense, useState, FC, useEffect} from "react"
 import {sleep} from "../lib"
+import {axiosClient} from "../api/axios"
+import {User} from "../types/user"
 
 const Top = () => {
   return (
@@ -8,6 +10,7 @@ const Top = () => {
       <Container>
         <h2>Top</h2>
         <Description />
+        <Users />
       </Container>
     </>
   )
@@ -32,6 +35,30 @@ const Description = () => {
       </Suspense>
     </>
   )
+}
+
+const Users = () => {
+  const users = useUser()
+
+  return (
+    <>
+      {/* NOTE: mapでないと表示されない */}
+      {users.map((user, index) => <p key={index}>{`${user.id}: ${user.name}`}</p>)}
+    </>
+  )
+}
+
+const useUser = () => {
+  const [users, setUsers] = useState<User[]>([])
+  useEffect(() => {
+    const getUsers = async () => {
+      const res = await axiosClient.get('users')
+      return res.data
+    }
+    getUsers().then((users) => setUsers(users))
+  }, [])
+
+  return users
 }
 
 export default Top
