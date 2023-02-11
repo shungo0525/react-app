@@ -1,3 +1,5 @@
+import styled from 'styled-components'
+
 type A = {
   name: string
 }
@@ -23,9 +25,15 @@ console.log(b)
 const Top = () => {
   return (
     <>
-      <h2>Top</h2>
+      <Container>
+        <h2>Top</h2>
+      </Container>
     </>
   )
 }
 
 export default Top
+
+const Container = styled.div`
+  text-align: center;
+`
