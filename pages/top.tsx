@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {Suspense, VFC, useState} from "react"
+import {Suspense, useState, FC} from "react"
 import {sleep} from "../lib"
 
 const Top = () => {
@@ -13,7 +13,7 @@ const Top = () => {
   )
 }
 
-export const SometimesSuspend: VFC = () => {
+export const SometimesSuspend: FC = () => {
   if (Math.random() < 0.5) {
     throw sleep(100)
   }
