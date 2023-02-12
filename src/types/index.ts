@@ -12,9 +12,9 @@ type B<T extends {foo: string}> = {
   user: T
 }
 
-const a: A= {name: 'name'}
-const b: B<{bar: string, foo: string}> = {user: {bar: 'bar', foo: 'foo'}}
-const c: C = {name: 'name', password: 'password'}
+const a: A= { name: 'name' }
+const b: B<{bar: string, foo: string}> = { user: { bar: 'bar', foo: 'foo' } }
+const c: C = { name: 'name', password: 'password' }
 
 console.log(a)
 console.log(b)

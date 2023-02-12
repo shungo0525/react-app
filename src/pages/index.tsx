@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import {Suspense, useState, FC, useEffect} from "react"
-import {sleep} from "../lib"
-import {axiosClient} from "../api/axios"
-import {User} from "../types/user"
+import { Suspense, useState, FC, useEffect } from "react"
+import { sleep } from "src/lib"
+import { axiosClient } from "src/api/axios"
+import { User } from "src/types/user"
 
 const Top = () => {
   return (
