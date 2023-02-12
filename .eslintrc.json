@@ -4,7 +4,8 @@
     "next/core-web-vitals"
   ],
   "rules": {
-    "semi": ["error", "never"]
+    "semi": ["error", "never"],
+    "eol-last": ["error", "always"]
     // "no-console": "error" // consoleについて
   }
 }
